@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- sintaxe ejs para adicionar algo na página -->
+<%- include('../partials/head'); %> 
+<%- include('../partials/header'); %> 
+<body class="container">
+    <main>
+        <div class="bg-dark bg-opacity-10 p-md-4">
+            <h1>Node com EJS</h1>
+            <p>Vamos aprender a trabalhar com arquivos EJS</p>
+        </div>
+
+        <ul>
+            <% qualities.forEach(function (quality) { %>
+                <li>
+                    <strong><%= quality.title %></strong> <%= quality.message.substring(1) %>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+</body>
+<%- include('../partials/footer'); %> 
+</html>
